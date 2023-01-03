@@ -35,7 +35,6 @@ bool StringAllocationManager::IsStringInBlackList(std::wstring& _str)
             return true;
         }
     }
-   // return std::find_if(filterBlacklist.begin(), filterBlacklist.end(), [&_str](std::vector< std::wstring>::iterator& _item) { return *_item == _str; }) != filterBlacklist.end();
     return false;
 }
 
