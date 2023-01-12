@@ -7,6 +7,10 @@ bool StringAllocationManager::InitFilterBlacklist()
 {
     try{
         std::wifstream fBlacklist("blacklist.txt");
+        if(!fBlacklist.is_open())
+        {
+            return false;
+        }
         wchar_t tmp[100];
         std::vector<std::wstring> tmplist;
         while (!fBlacklist.eof())
